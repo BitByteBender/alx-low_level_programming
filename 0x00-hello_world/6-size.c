@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main(Special Function) - Entry point.
+ * main - Entry point.
  *
  * Return: Always (Success)
  * return  value of main indicates a successful execution.
