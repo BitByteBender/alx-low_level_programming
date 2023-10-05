@@ -7,6 +7,6 @@
 int main(void)
 {
 const char *Text = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-write(1, Text, 64);
+write(1, Text, 59);
 return (1);
 }
