@@ -1,16 +1,12 @@
-#include <stdio.h>
+#include <unistd.h>
 /*
  * main - Entry point
  *
  * Return: Always 0 (Success)
  */
-void PrintText(const char* Text)
-{
-printf("%s\n", Text);
-}
 int main(void)
 {
-const char *Text = "and that piece of art is useful\" - Dora Korpar, 2015-10-19";
-PrintText(Text);
-return (0);
+const char *Text = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+write(1, Text, 64);
+return (1);
 }
