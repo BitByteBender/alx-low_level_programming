@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -S $CFILE -o "$(printf $CFILE | sed "s/c/s/")"
+gcc -S $CFILE -o "$(printf $CFILE | sed "s/c/s/")" -masm=intel
