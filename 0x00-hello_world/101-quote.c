@@ -4,12 +4,12 @@
 /**
  * main - Entry point
  *
- * print_text: Takes a string pointer as an argument, prints to console
+ * printfunc_text - Takes a string pointer as an argument, prints to console
  * @Text: A pointer to a string containing the text to be printed
  *
  * Return: Always 0 (Success)
  */
-void print_text(const char *Text)
+void printfunc_text(const char *Text)
 {
 write(1, Text, 59);
 }
@@ -21,6 +21,6 @@ const char *Text2 = "\" - Dora Korpar, 2016-10-19\n";
 char Quote[59];
 
 sprintf(Quote, "%s%s", Text1, Text2);
-print_text(Quote);
+printfunc_text(Quote);
 return (1);
 }
