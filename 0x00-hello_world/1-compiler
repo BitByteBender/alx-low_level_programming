@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -c $CFILE -o "$(print $CFILE | sed "s/c/o")"
+gcc -c $CFILE -o "$(printf $CFILE | sed "s/c/o/")"
