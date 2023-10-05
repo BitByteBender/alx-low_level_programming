@@ -22,5 +22,5 @@ char Quote[59];
 
 sprintf(Quote, "%s%s", Text1, Text2);
 print_text(Quote);
-return (0);
+return (1);
 }
