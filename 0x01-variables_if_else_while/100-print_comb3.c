@@ -25,8 +25,12 @@ else
 {
 putchar(i);
 putchar(j);
+
+if (Counter < 9)
+{
 putchar(',');
 putchar(' ');
+}
 j++;
 }
 
