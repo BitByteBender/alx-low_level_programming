@@ -8,46 +8,35 @@ int main(void)
 {
 
 short i = 48;
-short counter = 0;
-
-while (i <= 57)
+while (i <= 55)
 {
 
-short j = 49;
-while (j <= 57)
+short j = i + 1;
+while (j <= 56)
 {
 
 
-short k = 49;
+short k = j + 1;
 while (k <= 57)
 {
 
-if(k == 49)
-{
-++counter;
-k += counter;
-}
-else
-{
 putchar(i);
 putchar(j);
 putchar(k);
 
-if (counter < 9)
+if (i != 55 || j != 56 || k != 57)
 {
 putchar(',');
 putchar(' ');
 }
 
-k++;
+++k;
 }
 
+++j;
 }
 
-j++;
-}
-
-i++;
+++i;
 }
 
 putchar('\n');
