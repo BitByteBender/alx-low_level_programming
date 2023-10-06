@@ -19,7 +19,7 @@ while (j <= 57)
 if (j == 48)
 {
 ++Counter;
-j = j + Counter;
+j += Counter;
 }
 else
 {
