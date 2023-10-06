@@ -6,32 +6,31 @@
  */
 int main(void)
 {
+
 short i = 48;
-while (i < 57)
-{
-short j = 49;
-while (j < 58)
+short Counter = 0;
+while (i <= 57)
 {
 
-if (i != 58)
+short j = 48;
+while (j <= 57)
 {
-putchar(i);
-putchar(j);
 
-if (i < 57 && j < 57)
+if (j == 48)
 {
-putchar(',');
-putchar(' ');
-}
-
-j++;
+++Counter;
+j = j + Counter;
 }
 else
 {
-break;
-}
+putchar(i);
+putchar(j);
+putchar(',');
+putchar(' ');
+j++;
 }
 
+}
 i++;
 }
 
