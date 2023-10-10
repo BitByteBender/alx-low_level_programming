@@ -6,13 +6,11 @@
  */
 void print_chars(void)
 {
-	_putchar('_');
-	_putchar('p');
-	_putchar('u');
-	_putchar('t');
-	_putchar('c');
-	_putchar('h');
-	_putchar('a');
-	_putchar('r');
+	const char *Text = "_putchar";
+	unsigned short i;
+	for (i = 0; i<=7; i++)
+	{
+	_putchar(Text[i]);
+	}
 	_putchar('\n');
 }
