@@ -14,13 +14,13 @@
  */
 void jack_bauer(void)
 {
-	unsigned short i, j;
-	for (i = 0; i <= 23; i++)
+unsigned short i, j;
+for (i = 0; i <= 23; i++)
+{
+	for (j = 0; j <= 59; j++)
 	{
-		for (j = 0; j <= 59; j++)
-		{
-			_triplets(i / 10, i % 10, ':');
-			_triplets(j / 10, j % 10, '\n');
-		}
+		_triplets(i / 10, i % 10, ':');
+		_triplets(j / 10, j % 10, '\n');
 	}
+}
 }
