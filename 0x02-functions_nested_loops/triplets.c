@@ -10,7 +10,7 @@
  */
 void _triplets(unsigned short n1, unsigned short n2, char c)
 {
-	_putchar(n1);
-	_putchar(n2);
+	_putchar(n1 + '0');
+	_putchar(n2 + '0');
 	_putchar(c);
 }
