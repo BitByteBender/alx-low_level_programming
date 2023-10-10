@@ -1,14 +1,14 @@
+#include <stdio.h>
 #include "main.h"
 /**
- * sum_numbers - takes no param
- *
+ * main - Entry point
  *
  * loop(i): will iterate from 1 to 9
  * Condition check if i % 3 or 5 equals 0
  * Sum: Starts from 0 then get filled by i
  * Return: Sum value
  */
-int sum_numbers(void)
+int main(void)
 {
 unsigned short i;
 int Sum = 0;
@@ -19,5 +19,6 @@ for (i = 1; i < 10; i++)
 	Sum = Sum + i;
 	}
 }
-	return (Sum);
+	printf("%d\n", Sum);
+	return (0);
 }
