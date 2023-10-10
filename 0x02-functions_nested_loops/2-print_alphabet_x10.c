@@ -2,10 +2,9 @@
 /**
  * print_alphabet_x10 - takes no parameters
  *
- * First loop: loops 10 times
+ * First loop: loops 10 times then prints a new line
  * Second loop: loops from 97 to 122 which is a to z(ASCII)
  *
- * new line at the end
  */
 void print_alphabet_x10(void)
 {
