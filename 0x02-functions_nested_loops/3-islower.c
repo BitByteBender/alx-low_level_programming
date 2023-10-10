@@ -1,10 +1,14 @@
 #include "main.h"
 /**
- * print_alphabet - takes no parameters
+ * _islower - takes an integer param
+ * @c: is an integer param
  *
- * loops from 97 to 122 which is a to z(ASCII)
+ * checks if the entered value is lowercase or not
+ * if lowercase returns 1
+ * else returns 0
  *
- * new line at the end
+ * Return: 1 if value is lowercase
+ * Or: 0 if value is not lowercase
  */
 int _islower(int c)
 {
