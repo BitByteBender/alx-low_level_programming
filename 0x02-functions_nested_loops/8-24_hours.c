@@ -6,10 +6,8 @@
  * _triplets prints 2 integers & 1 char
  *
  *
- * First loop(i): will iterate from 0 to 2
- * Second loop(j): will iterate from 0 to 3
- * Third loop(k): will iterate from 0 to 5
- * Fourth loop(l): will iterate from 0 to 9
+ * First loop(i): will iterate from 0 to 23
+ * Second loop(j): will iterate from 0 to 59
  * _triplets: to print values
  */
 void jack_bauer(void)
