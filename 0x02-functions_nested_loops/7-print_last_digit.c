@@ -12,7 +12,7 @@
  */
 int print_last_digit(int Num)
 {
-	int GetLastDigit = _abs(Num % 10);
-
-	return (_putchar('0' + GetLastDigit));
+int GetLastDigit = _abs(Num % 10);
+_putchar('0' + GetLastDigit);
+return (GetLastDigit);
 }
