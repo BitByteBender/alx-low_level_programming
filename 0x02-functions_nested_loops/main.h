@@ -19,5 +19,7 @@ int _abs(int Num);
 
 int print_last_digit(int Num);
 
+void _triplets(unsigned short n1, unsigned short n2, char c);
+
 void jack_bauer(void);
 #endif
