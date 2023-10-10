@@ -4,7 +4,7 @@
  *
  * Prints multiple _putchar() functions
  */
-void print_chars(void)
+void _print_chars(void)
 {
 const char *Text = "_putchar";
 unsigned short i;
