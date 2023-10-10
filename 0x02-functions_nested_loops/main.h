@@ -28,4 +28,8 @@ void times_table(void);
 int add(short n1, short n2);
 
 void print_to_98(int n);
+
+void print_times_table(int n);
+
+int sum_numbers(void);
 #endif
