@@ -25,5 +25,5 @@ void jack_bauer(void);
 
 void times_table(void);
 
-int add(unsigned short n1, unsigned short n2);
+int add(short n1, short n2);
 #endif
