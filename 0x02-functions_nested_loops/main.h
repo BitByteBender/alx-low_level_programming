@@ -24,4 +24,6 @@ void _triplets(unsigned short n1, unsigned short n2, char c);
 void jack_bauer(void);
 
 void times_table(void);
+
+int add(unsigned short n1, unsigned short n2);
 #endif
