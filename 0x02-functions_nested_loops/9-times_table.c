@@ -16,7 +16,7 @@ for (i = 0; i <= 9; i++)
 	for (j = 0; j <= 9; j++)
 	{
 	unsigned short result = i * j;
-		if (j != 0 && j <= 9)
+		if (j > 0)
 		{
 		_putchar(',');
 		_putchar(' ');
