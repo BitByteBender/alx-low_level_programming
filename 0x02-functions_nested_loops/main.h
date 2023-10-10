@@ -3,7 +3,7 @@
 
 int _putchar(char c);
 
-void PrintCharacters();
+void print_chars();
 
 void print_alphabet();
 

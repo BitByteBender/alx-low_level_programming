@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * PrintCharacters - Has no parameters
+ * print_chars - Has no parameters
  *
  * Prints multiple _putchar() functions
  */
-void PrintCharacters(void)
+void print_chars(void)
 {
 	_putchar('_');
 	_putchar('p');
