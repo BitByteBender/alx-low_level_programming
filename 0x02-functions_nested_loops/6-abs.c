@@ -10,6 +10,6 @@
  * Return: Absolute value
  */
 int _abs(int Num)
-{	
+{
 	return ((Num < 0) ? Num * (-1) : Num);
 }
