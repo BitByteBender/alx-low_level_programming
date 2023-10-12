@@ -2,7 +2,6 @@
 #include "main.h"
 /**
  * main - Entry point
- *
  * While loop divide Number by 2 until becomes odd
  * Nested loop checks odd factors
  * If remaining Number is a prime greater than 2
