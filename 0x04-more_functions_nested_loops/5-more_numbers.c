@@ -6,7 +6,8 @@
  * loop from 0 till 9 using ASCII
  * Used ternary operator to check if j < 10
  * Using _putchar to print the numbers
- * Second _putchar prints a new line
+ * Feeding a ternary operator to 1st _putchar
+ * Third _putchar prints a new line
  */
 void more_numbers(void)
 {
