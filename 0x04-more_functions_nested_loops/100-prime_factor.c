@@ -19,15 +19,15 @@ int main(void)
 
 	while ((Number % 2) == 0)
 	{
-	Number	= (Number / 2);
+	Number = (Number / 2);
 	}
 
-	for (i = 3;	(i * i) <= Number ; i += 2)
+	for (i = 3; (i * i) <= Number; i += 2)
 	{
 
 	while (Number % i == 0)
 	{
-	Number	=	(Number / i);
+	Number = (Number / i);
 	greatestNumber = i;
 	}
 
