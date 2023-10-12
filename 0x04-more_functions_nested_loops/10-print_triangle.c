@@ -14,7 +14,7 @@ void print_triangle(int size)
 {
 	unsigned short i, j, k;
 
-	if (size == 0)
+	if (size < 1)
 	{
 	_putchar('\n');
 	}
