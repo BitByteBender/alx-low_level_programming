@@ -13,12 +13,12 @@
 int _isupper(int c)
 {
 	/*return (c >= 97 && c <= 127 ? 0 : 1);*/
-if (c >= 97 && c <= 127)
+if (c >= 65 && c <= 90)
 {
-return (0);
+return (1);
 }
 else
 {
-return (1);
+return (0);
 }
 }
