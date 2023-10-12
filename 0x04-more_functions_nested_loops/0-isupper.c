@@ -12,5 +12,13 @@
  */
 int _isupper(int c)
 {
-	return (c >= 97 && c <= 127 ? 0 : 1);
+	/*return (c >= 97 && c <= 127 ? 0 : 1);*/
+if (c >= 97 && c <= 127)
+{
+return (0);
+}
+else
+{
+return (1);
+}
 }
