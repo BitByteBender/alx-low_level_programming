@@ -12,15 +12,19 @@
 void _puts(char *str)
 {
 	unsigned short i;
-	
-	if (str == NULL)
+
+	for (i = 0; i < strlen(str); i++)
 	{
-		_putchar(' ');	
-	}
-	
-	for (i = 0; i <= (strlen(str) - 1); i++)
-	{
-	_putchar(str[i]);
+		if (str == NULL)
+		{
+			_putchar(' ');
+			break;
+		}
+		else
+		{
+
+		_putchar(str[i]);
+		}
 	}
 	_putchar('\n');
 }
