@@ -15,7 +15,7 @@ void _puts(char *str)
 	
 	if (str == NULL)
 	{
-		_putchar(48);	
+		_putchar(' ');	
 	}
 	
 	for (i = 0; i <= (strlen(str) - 1); i++)
