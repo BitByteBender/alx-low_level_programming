@@ -12,7 +12,12 @@
 void _puts(char *str)
 {
 	unsigned short i;
-
+	
+	if (str == NULL)
+	{
+		_putchar(48);	
+	}
+	
 	for (i = 0; i <= (strlen(str) - 1); i++)
 	{
 	_putchar(str[i]);
