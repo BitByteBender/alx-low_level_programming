@@ -1,10 +1,10 @@
 #include <string.h>
 #include "main.h"
 /**
- * _puts2 - Takes a char pointer as a param
+ * puts2 - Takes a char pointer as a param
  * @str: a pointer to the 1st char of a string
  * strlen(): Calculates the length of a string
- * loop: goes from 0 to array of chars - 1
+ * loop: goes from 0 to array of chars - 1(jumps every next index)
  * [i]: i is an array's index
  * string is an array of chars
  * _putchar for printing
