@@ -15,9 +15,8 @@ void puts_half(char *str)
 
 	for (i = ((strlen(str) + 1) / 2); i <= (strlen(str) - 1); i++)
 	{
-		if (str == NULL || str[0] == '\0')
+		if (str == NULL || *str == '\0')
 		{
-			_putchar(' ');
 			break;
 		}
 		else
@@ -25,6 +24,5 @@ void puts_half(char *str)
 		_putchar(str[i]);
 		}
 	}
-
 	_putchar('\n');
 }
