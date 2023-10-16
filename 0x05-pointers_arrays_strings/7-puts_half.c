@@ -13,18 +13,18 @@ void puts_half(char *str)
 {
 	unsigned short i;
 
+	if (str == NULL || str[0] == '\0')
+	{
+		_putchar(' ');
+		return;
+	}
+	else
+	{
 	for (i = ((strlen(str) + 1) / 2); i <= (strlen(str) - 1); i++)
 	{
-		if (str == NULL)
-		{
-			_putchar(' ');
-			break;
-		}
-		else
-		{
 
 		_putchar(str[i]);
-		}
+	}
 	}
 	_putchar('\n');
 }
