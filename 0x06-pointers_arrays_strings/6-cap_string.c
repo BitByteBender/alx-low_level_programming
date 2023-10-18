@@ -11,7 +11,7 @@ bool check_sepr(char a, char *sepr)
 {
 	unsigned short k;
 
-	for (k = 0; k <= (strlen(sepr) - 1) && *sepr != '\0'; k++)
+	for (k = 0; sepr[k] != '\0'; k++)
 	{
 		if (a == sepr[k])
 		{
@@ -41,7 +41,7 @@ char *cap_string(char *a)
 			'"', '(', ')', '!', '?', '{', '}'};
 	/*char sepr[] = ",. \n\t\"?!(){};";*/
 
-	for (i = 0; i <= (strlen(a) - 1) && *a != '\0'; i++)
+	for (i = 0; i <= (strlen(a) - 1) && a[i] != '\0'; i++)
 	{
 		if (a[i] == '\t')
 		{
