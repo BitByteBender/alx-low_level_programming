@@ -1,7 +1,7 @@
 #include "main.h"
 #include <string.h>
 /**
- * _strcat - takes 2 char pointers as params
+ * _strcat - takes 2 char pointers as params (Concatenates two strings)
  * @dest: a pointer to the destination of a string array
  * @src: a pointer to the src array(string) of chars
  * loop: starts from the index 0 to full length of dest
