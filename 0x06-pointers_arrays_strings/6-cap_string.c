@@ -11,7 +11,7 @@ bool check_sepr(char a, char *sepr)
 {
 	unsigned short k;
 
-	for (k = 0; k <= (strlen(sepr) - 1); k++)
+	for (k = 0; k <= (strlen(sepr) - 1) && *sepr != '\0'; k++)
 	{
 		if (a == sepr[k])
 		{
@@ -39,10 +39,11 @@ char *cap_string(char *a)
 	unsigned short i, j;
 	char sepr[] = {' ', '.', ';', '\t', '\n', ',',
 			'"', '(', ')', '!', '?', '{', '}'};
+	/*char sepr[] = ",. \n\t\"?!(){};";*/
 
-	for (i = 0; i <= (strlen(a) - 1); i++)
+	for (i = 0; i <= (strlen(a) - 1) && *a != '\0'; i++)
 	{
-		for (j = 65; j <= 90; j++)
+		for (j = 'A'; j <= 'Z'; j++)
 		{
 			if ((int)a[i] == (j + 32) && check_sepr(a[i - 1], sepr))
 			{
