@@ -43,7 +43,7 @@ char *cap_string(char *a)
 
 	for (i = 0; i <= (strlen(a) - 1) && *a != '\0'; i++)
 	{
-		for (j = 'A'; j <= 'Z'; j++)
+		for (j = 65; j <= 122; j++)
 		{
 			if ((int)a[i] == (j + 32) && check_sepr(a[i - 1], sepr))
 			{
