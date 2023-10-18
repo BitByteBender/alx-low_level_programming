@@ -14,7 +14,7 @@ char *string_toupper(char *a)
 {
 	unsigned short i, j;
 
-	for (i = 0; i <= (strlen(a) - 1); i++)
+	for (i = 0; i <= (strlen(a) - 1) && *a != '\0'; i++)
 	{
 		for (j = 65; j <= 90; j++)
 		{
