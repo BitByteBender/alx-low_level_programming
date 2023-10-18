@@ -45,8 +45,7 @@ char *cap_string(char *a)
 	{
 		if (a[i] == '\t')
 		{
-			a[i] = ' ';
-			continue;
+			a[i] = sepr[0];
 		}
 		for (j = 65; j <= 122; j++)
 		{
