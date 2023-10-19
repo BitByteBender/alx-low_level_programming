@@ -44,7 +44,7 @@ char *cap_string(char *a)
 		{
 			a[i] = sepr[0];
 		}
-		if (a[i] >= 'a' && a[i] <= 'z' && check_sepr(a[i - 1], sepr))
+		if ((a[i] >= 'a' && a[i] <= 'z') && (check_sepr(a[i - 1], sepr) || i == 0))
 		{
 			a[i] = a[i] - 32;
 		}
