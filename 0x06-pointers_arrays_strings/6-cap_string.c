@@ -27,7 +27,6 @@ bool check_sepr(char a, char *sepr)
  * loop: goes from index 0 to last index (loop through the string)
  * Checks for tabs and replace with space
  * checks if the current chars is a lowercase letter and if prev char is a sepr
- * strlen(): Calculates the length of a string
  * Convert letter to uppercase
  * Return: modified string
  */
@@ -40,11 +39,13 @@ char *cap_string(char *a)
 
 	for (i = 0; a[i] != '\0'; i++)
 	{
-		/*if (a[i] == '\t')
-		{
-			a[i] = sepr[0];
-		}*/
-		
+		/**
+		 * if (a[i] == '\t')
+		 * {
+		 * a[i] = sepr[0];
+		 * }
+		 */
+
 		if (a[i] >= 'a' && a[i] <= 'z')
 		{
 			if (check_sepr(a[i - 1], sepr) || i == 0)
