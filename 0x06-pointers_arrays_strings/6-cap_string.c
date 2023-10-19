@@ -24,19 +24,16 @@ bool check_sepr(char a, char *sepr)
 /**
  * cap_string - Checks for all letters that has symbols behind them.
  * @a: a pointer to the firs string(array of chars)
- * loop-1: goes from index 0 to last index
- * loop-2: Checks the ASCII Alphabets [A-Z]
- * Condition:
- * Does explicit casting to compare the array index and j
- * Checks for matching pattern(sepr then letter)
- * Since j using ASCII table, I used casting
- * to turn it into a char then switch/feed it into that index
+ * loop: goes from index 0 to last index (loop through the string)
+ * Checks for tabs and replace with space
+ * checks if the current chars is a lowercase letter and if prev char is a sepr
  * strlen(): Calculates the length of a string
- * Return: a(full string) in uppercase instead of lowercase
+ * Convert letter to uppercase
+ * Return: modified string
  */
 char *cap_string(char *a)
 {
-	unsigned short i, j;
+	unsigned short i;
 	char sepr[] = {' ', '.', ';', '\t', '\n', ',',
 			'"', '(', ')', '!', '?', '{', '}'};
 	/*char sepr[] = ",. \n\t\"?!(){};";*/
@@ -47,13 +44,9 @@ char *cap_string(char *a)
 		{
 			a[i] = sepr[0];
 		}
-		for (j = 65; j <= 122; j++)
+		if (a[i] >= 'a' && a[i] <= 'z' && check_sepr(a[i - 1], sepr))
 		{
-			if ((int)a[i] == (j + 32) && check_sepr(a[i - 1], sepr))
-			{
-				a[i] = (char)j;
-				break;
-			}
+			a[i] = a[i] - 32;
 		}
 	}
 
