@@ -38,16 +38,21 @@ char *cap_string(char *a)
 			'"', '(', ')', '!', '?', '{', '}'};
 	/*char sepr[] = ",. \n\t\"?!(){};";*/
 
-	for (i = 0; i <= (strlen(a) - 1) && a[i] != '\0'; i++)
+	for (i = 0; a[i] != '\0'; i++)
 	{
-		if (a[i] == '\t')
+		/*if (a[i] == '\t')
 		{
 			a[i] = sepr[0];
-		}
-		if ((a[i] >= 'a' && a[i] <= 'z') && (check_sepr(a[i - 1], sepr) || i == 0))
+		}*/
+		
+		if (a[i] >= 'a' && a[i] <= 'z')
 		{
-			a[i] = a[i] - 32;
+			if (check_sepr(a[i - 1], sepr) || i == 0)
+			{
+			a[i] -= 32;
+			}
 		}
+
 	}
 
 
