@@ -11,10 +11,6 @@
  */
 char *_strchr(char *s, char c)
 {
-	if (c == '\0')
-	{
-		return (s);
-	}
 
 		for (; *s != '\0'; s++)
 		{
@@ -23,6 +19,10 @@ char *_strchr(char *s, char c)
 			return (s);
 			}
 		}
+	if (c == '\0')
+	{
+		return (s);
+	}
 
 	return (NULL);
 }
