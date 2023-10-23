@@ -26,5 +26,5 @@ char *_strchr(char *s, char c)
 		}
 	}
 
-	return ("char is not found");
+	return (NULL);
 }
