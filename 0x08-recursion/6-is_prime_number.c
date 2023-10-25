@@ -18,7 +18,7 @@ int prime_checker(int n, short Itr)
 		{
 		return (0);
 		}
-		if (Itr > round(n / 2))
+		if (Itr * Itr > n)
 		{
 		return (1);
 		}
