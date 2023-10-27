@@ -7,10 +7,10 @@
  * If arguments less than 2 print Error
  * Iterates from index 1 then calculate till max count
  * Stored calculation inside Result
- * used atoi() to convert argument at current index to int
+ * used atol() to convert argument at current index to int
  *
  * Return:
- * 1 if argument count is less than 2
+ * 1 if argument count is less than or equal 2
  * Always 0 (Success)
  */
 int main(int argc, char *argv[])
