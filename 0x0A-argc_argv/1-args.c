@@ -1,15 +1,15 @@
 #include <stdio.h>
 /**
- * main - Entry point takes two args
- * @argc: intger argument count
+ * main - Special function takes two args
+ * @argc: Integer argument count
  * @argv: argument value (array of chars pointers)
- * argument value set to null byte
+ * argument value Intentionally casted to void to be unused
  * prints argument count - 1
- * Return: argc (argument count)
+ * Return: Aways 0 (Success)
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	*argv = '\0';
+	(void)*argv;
 	printf("%d\n", (argc - 1));
-	return (argc);
+	return (0);
 }
