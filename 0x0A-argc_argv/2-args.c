@@ -1,30 +1,20 @@
 #include <stdio.h>
 /**
- * main - Entry point takes two args
- * @argc: intger argument count
+ * main - Special function takes two args
+ * @argc: Integer argument count
  * @argv: argument value (array of chars pointers)
- * If dereferenced argv is a null byte exit
- * Else Iterates from index 0 to max count(argc)
- * then prints argument value by index
  *
- * Return:
- * if null byte return 0
- * argc (argument count)
+ * Iterates from index 0 to max count(argc)
+ * prints argument value at every index
+ * Return: Aways 0 (Success)
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
 	unsigned short i;
 
-	if (**argv == '\0')
+	for (i = 0; i < argc; i++)
 	{
-		return (0);
+		printf("%s\n", argv[i]);
 	}
-	else
-	{
-		for (i = 0; i < argc; i++)
-		{
-			printf("%s\n", argv[i]);
-		}
-	}
-	return (argc);
+	return (0);
 }
