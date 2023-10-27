@@ -5,7 +5,7 @@
  * @argc: intger argument count
  * @argv: argument value (array of chars pointers)
  * If arguments less than 2 print Error
- * Else Iterates from index 1 then calculate till max count
+ * Iterates from index 1 then calculate till max count
  * Stored calculation inside Result
  * used atoi() to convert argument at current index to int
  *
@@ -23,14 +23,13 @@ int main(int argc, char *argv[])
 	puts("Error");
 	return (1);
 	}
-	else
-	{
-		for (i = 1; i < argc; i++)
-		{
-			Result *= atol(argv[i]);
-		}
 
+	for (i = 1; i < argc; i++)
+	{
+		Result *= atol(argv[i]);
 	}
+
+
 	printf("%ld\n", Result);
 	return (0);
 }
