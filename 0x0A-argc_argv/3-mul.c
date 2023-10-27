@@ -11,7 +11,7 @@
  *
  * Return:
  * 1 if argument count is less than 2
- * argc (argument count)
+ * Always 0 (Success)
  */
 int main(int argc, char *argv[])
 {
@@ -32,5 +32,5 @@ int main(int argc, char *argv[])
 
 	}
 	printf("%ld\n", Result);
-	return (argc);
+	return (0);
 }
