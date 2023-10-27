@@ -1,37 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-/**
- * _isDigit - takes an integer param
- * @c: is an integer param
- * Checks if the entered value is a digit or not
- * if digit return 1 else 0
- *
- * Return: 0 for not a digit or 1 if it's a digit
- */
-int _isDigit(int c)
-{
-	return ((c >= 48 && c <= 57) ? 1 : 0);
-}
-/**
- * checkDigits - checks if a string contains just digits
- * @Arg: string to be scanned/checked
- *
- * Return: 1 if string contains only digits
- * 0 if it doesn't contain digits
- */
-bool checkDigits(const char *Arg)
-{
-	while (*Arg)
-	{
-		if (!_isDigit(*Arg))
-		{
-			return (0);
-		}
-	Arg++;
-	}
-	return (1);
-}
+
+int _isDigit(int);
+
+bool checkDigits(const char *);
 /**
  * main - Entry point takes two args
  * @argc: intger argument count
@@ -60,4 +33,38 @@ int main(int argc, char *argv[])
 
 	printf("%ld\n", Result);
 	return (0);
+}
+/**
+ * _isDigit - takes an integer param
+ * @c: is an integer param
+ * Checks if the entered value is a digit or not
+ * if digit return 1 else 0
+ *
+ * Return: 0 for not a digit or 1 if it's a digit
+ */
+int _isDigit(int c)
+{
+	return (c >= 48 && c <= 57 ? 1 : 0);
+}
+
+/**
+ * checkDigits - checks if a string contains just digits
+ * @Arg: string to be scanned/checked
+ *
+ * Return: 1 if string contains only digits
+ * 0 if it doesn't contain digits
+ */
+
+bool checkDigits(const char *Arg)
+{
+	while (*Arg)
+	{
+		if (!_isDigit(*Arg))
+		{
+		return (0);
+		}
+	Arg++;
+	}
+
+	return (1);
 }
