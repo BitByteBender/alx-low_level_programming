@@ -8,7 +8,7 @@
  * var s1_s2: string container used for copying and concatenation
  * used malloc() for memory allocation
  * Checks:
- * if string @s1 and @s2 is NULL
+ * if string @s1 and @s2 are not NULL
  * if var s1_s2 got memory allocation
  *
  * for loop for copying @s1 to var s1_s2 by index
@@ -20,39 +20,37 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *s1_s2;
+	unsigned short i = 0;
+	unsigned short s1Length = 0, s2Length = 0;
+	unsigned short MaxLength = 0;
 
-	if (s1 == NULL && s1 == NULL)
+	if (s1 != NULL)
 	{
-		return (NULL);
+	s1Length = strlen(s1);
 	}
-	else
+	if (s2 != NULL)
 	{
-		unsigned short i, Length = (strlen(s1) + strlen(s2));
+	s2Length = strlen(s2);
+	}
 
-		s1_s2 = malloc(Length + 1);
+	MaxLength = (s1Length + s2Length);
 
-		if (s1_s2 == NULL)
-		{
-			return (NULL);
-		}
+	s1_s2 = malloc(MaxLength + 1);
 
-	for (i = 0; i <= Length; i++)
+	if (s1_s2 != NULL)
 	{
-		if (i >= strlen(s1) && *s2 != '\0')
+	for (i = 0; i < MaxLength; i++)
+	{
+		if (i >= s1Length)
 		{
-			s1_s2[i] = s2[i - strlen(s1)];
-			if (s1_s2[i] == '\0')
-			{
-			break;
-			}
+		s1_s2[i] = s2[i - s1Length];
 		}
 		else
 		{
-			s1_s2[i] = s1[i];
+		s1_s2[i] = s1[i];
 		}
 	}
-	s1_s2[Length] = '\0';
+	s1_s2[MaxLength] = '\0';
 	}
-
 	return (s1_s2);
 }
