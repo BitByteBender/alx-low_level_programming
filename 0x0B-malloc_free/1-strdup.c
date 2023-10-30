@@ -33,7 +33,7 @@ char *_strdup(char *str)
 	else
 	{
 		_strcpy(Copied_str, str);
-		Copied_str[Length] = '\0';
+		Copied_str[Length + 1] = '\0';
 	}
 
 	return (Copied_str);
