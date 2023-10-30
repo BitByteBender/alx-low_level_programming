@@ -29,12 +29,12 @@ char *create_array(unsigned int size, char c)
 		/*str = malloc(sizeof(str) * (size + 1));*/
 		str = malloc(sizeof(str) * size);
 
-		for (i = 0; i < size; i++)
+		for (i = 0; i <= (size - 1); i++)
 		{
 			str[i] = c;
 		}
 	}
 
-	/*str[size] = '\0';*/
+	str[size] = '\0';
 	return (str);
 }
