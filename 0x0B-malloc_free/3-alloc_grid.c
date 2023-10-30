@@ -12,6 +12,8 @@
  * allocate memory to columns
  * Loop: loops through each row and allocate memory
  * if inside the loop checks if allocation for rows fails
+ * if rows allocation fails then free previous
+ * memory allocated and return NULL
  * Return:
  * if allocation(success) return a ptr to 2D grid
  * if allocation(fails or height/width is 0 or negative)
