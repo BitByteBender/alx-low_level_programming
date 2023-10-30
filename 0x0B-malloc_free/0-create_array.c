@@ -4,6 +4,8 @@
  * create_array - a char pointer function that fills an array with @c
  * @size: an integer param
  * @c: a char param
+ * used malloc() for memory allocation
+ * added 1 to size for the null terminator '\0'
  * size used to check if 0 return NULL
  * Else
  * declared a string and gave it a size using malloc()
@@ -25,7 +27,7 @@ char *create_array(unsigned int size, char c)
 	{
 		unsigned short i;
 
-		str = malloc(sizeof(*str) * size);
+		str = malloc(sizeof(str) * (size + 1));
 
 		for (i = 0; i < size; i++)
 		{
