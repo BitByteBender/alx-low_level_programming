@@ -38,9 +38,13 @@ char *str_concat(char *s1, char *s2)
 
 	for (i = 0; i <= Length; i++)
 	{
-		if (i >= strlen(s1))
+		if (i >= strlen(s1) && *s2 != '\0')
 		{
 			s1_s2[i] = s2[i - strlen(s1)];
+			if (s1_s2[i] == '\0')
+			{
+			break;
+			}
 		}
 		else
 		{
