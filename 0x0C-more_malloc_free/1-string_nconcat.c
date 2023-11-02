@@ -15,34 +15,29 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *s1_s2;
+	unsigned short i = 0, s2Length = strlen(s2);
+	unsigned short Length = 0;
 
-	if (s1 == NULL && s2 == NULL)
-	{
-		return (NULL);
-	}
-	else
-	{
-		unsigned short i = 0, s1_s2Length = ((n * 2) + 1);
-		/**
-		 * for testing purposes
-		 * printf("s1_s2Length: %d\n", s1_s2Length);
-		 */
-		s1_s2 = (char *)malloc(s1_s2Length);
+	(s1 == NULL ? s1 = "" : s2 == NULL ? s2 = "" : "");
 
-		if (s1_s2 != NULL)
+	(n >= s2Length ? (Length = (s2Length * 2 + 1)) : (Length = (n * 2) + 1));
+
+	s1_s2 = (char *)malloc(Length);
+
+	if (s1_s2 != NULL)
+	{
+		for (i = 0; i <= (n - 1); i++)
 		{
-			for (i = 0; i <= (n - 1); i++)
-			{
-			s1_s2[i] = s1[i];
-			}
-
-			for (i = 0; i <= (n - 1); i++)
-			{
-			s1_s2[i + (n - 1)] = s2[i];
-			}
+		s1_s2[i] = s1[i];
 		}
-	s1_s2[s1_s2Length] = '\0';
+
+		for (i = 0; i <= (n - 1); i++)
+		{
+		s1_s2[i + (n - 1)] = s2[i];
+		}
 	}
+
+	s1_s2[Length] = '\0';
 
 	return (s1_s2);
 }
