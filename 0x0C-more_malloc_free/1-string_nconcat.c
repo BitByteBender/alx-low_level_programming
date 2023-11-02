@@ -36,12 +36,15 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s1_s2 != NULL)
 	{
 		for (i = 0; i <= (s1Length - 1); i++)
-		{
 			s1_s2[i] = s1[i];
-		}
-
-		for (i = 0; i <= (n - 1); i++)
+		if (n >= s2Length)
 		{
+		for (i = 0; s2[i] != '\0'; i++)
+			s1_s2[i + s1Length] = s2[i];
+		}
+		else
+		{
+		for (i = 0; i <= (n - 1); i++)
 			s1_s2[i + s1Length] = s2[i];
 		}
 	s1_s2[s1_s2Length] = '\0';
