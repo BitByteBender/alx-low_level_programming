@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 #include <stdlib.h>
 #include <string.h>
@@ -25,6 +24,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	s1Length = strlen(s1);
 	s2Length = strlen(s2);
+
+	if (n >= s2Length)
+		n = s2Length;
 
 	s1_s2Length = s1Length + n;
 
