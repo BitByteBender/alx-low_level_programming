@@ -1,5 +1,4 @@
 #include "dog.h"
-#include <stdlib.h>
 /**
  * free_dog - a function that frees allocated memory
  * @d: a pointer to dog struct
