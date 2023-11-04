@@ -12,12 +12,9 @@ void free_dog(dog_t *d)
 {
 	if (d == NULL)
 	{
-	exit(6);
+	return;
 	}
-	else
-	{
 	free(d->name);
 	free(d->owner);
 	free(d);
-	}
 }
