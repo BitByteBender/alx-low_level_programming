@@ -1,6 +1,7 @@
 #include "dog.h"
 #include <stddef.h>
 #include <stdlib.h>
+#include <string.h>
 char *storeCopy(char *);
 /**
  * new_dog - creates and inits a new dog(poppy) struct
@@ -23,14 +24,27 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	if (d_t == NULL)
 	{
-	free(d_t);
-	return (NULL);
+		return (NULL);
 	}
 	else
 	{
-	d_t->name = storeCopy(name);
-	d_t->age = age;
-	d_t->owner = storeCopy(owner);
+		d_t->name = storeCopy(name);
+
+		if (d_t->name == NULL)
+		{
+		free(d_t);
+		return (NULL);
+		}
+
+		d_t->age = age;
+		d_t->owner = storeCopy(owner);
+
+		if (d_t->owner == NULL)
+		{
+		free(d_t->name);
+		free(d_t);
+		return (NULL);
+		}
 	}
 	return (d_t);
 }
@@ -53,20 +67,20 @@ char *storeCopy(char *string)
 	}
 	else
 	{
-		unsigned short i = 0, stringLength = 0;
+	unsigned short i = 0, stringLength = strlen(string);
+
+	stringCopy = (char *)malloc(stringLength + 1);
 
 	while (string[stringLength])
 		stringLength++;
 
-	stringCopy = (char *)malloc(stringLength + 1);
-
-	if (stringCopy)
+	if (!(stringCopy))
 		return (NULL);
 
 	for (i = 0; string[i] != '\0'; i++)
 		stringCopy[i] = string[i];
 
-	stringCopy[stringLength + 1] = '\0';
+	stringCopy[stringLength] = '\0';
 	}
 
 	return (stringCopy);
