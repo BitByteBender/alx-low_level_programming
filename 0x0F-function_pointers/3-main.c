@@ -19,7 +19,7 @@ int main(int argc, char **argv)
 
 	if (argc < 4)
 	{
-	puts("Usage: calc num1 operator num2");
+	puts("Error");
 	exit(98);
 	}
 
