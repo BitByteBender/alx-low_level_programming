@@ -21,15 +21,11 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 	}
 	else
 	{
-		size_t *Counter = (size_t *)malloc(sizeof(size_t));
+		unsigned short i = 0;
 
-		if (Counter == NULL)
-			return;
-
-		for ((*Counter) = 0; (*Counter) <= (size - 1); (*Counter)++)
+		for (i = 0; i <= (size - 1); i++)
 		{
-			action(array[*Counter]);
+			action(array[i]);
 		}
-		free(Counter);
 	}
 }
