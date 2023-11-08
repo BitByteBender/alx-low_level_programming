@@ -13,7 +13,7 @@
  * or
  * NULL if operator non-existent
  */
-int (*get_op_func(char *s))(int num1, int num2)
+int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
 	{"+", op_add},
