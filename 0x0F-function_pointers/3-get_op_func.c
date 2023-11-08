@@ -26,8 +26,12 @@ int (*get_op_func(char *s))(int num1, int num2)
 
 	int i = 0;
 
-	while (ops[i].op != NULL && strcmp(s, ops[i].op) != 0)
-		i++;
+	while (ops[i].op != NULL)
+	{
+	if (strcmp(s, ops[i].op) == 0)
+		return (ops[i].f);
+	i++;
+	}
 
-	return (ops[i].op != NULL ? ops[i].f : NULL);
+	return (NULL);
 }
