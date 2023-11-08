@@ -17,7 +17,7 @@ int main(int argc, char **argv)
 	int num1 = 0, num2 = 0, Outcome = 0;
 	char *op;
 
-	if (argc != 4)
+	if (argc < 4)
 	{
 	puts("Usage: calc num1 operator num2");
 	exit(98);
