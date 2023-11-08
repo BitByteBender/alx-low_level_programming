@@ -2,14 +2,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- *
+ * main - gets user inputs/commands and perform calcs
+ * @argc: number of command line args(argument count)
+ * @argv: array of command line args(argument value)
+ * Return:
+ * if argc is less than 4 exit 98
+ * if invalid operator exit 99
+ * if division or mod by 0 exit 100
+ * if success return the calculation
  */
 int main(int argc, char **argv)
 {
-	Operation_func op_func;
+	Operation_func op_func = NULL;
 	int num1 = 0, num2 = 0, Outcome = 0;
 	char *op;
-	
+
 	if (argc != 4)
 	{
 	puts("Usage: calc num1 operator num2");
