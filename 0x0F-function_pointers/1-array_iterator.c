@@ -17,14 +17,14 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	if (array == NULL || action == NULL)
 	{
-		exit(6);
+		return;
 	}
 	else
 	{
 		size_t *Counter = (size_t *)malloc(sizeof(size_t));
 
 		if (Counter == NULL)
-			exit(6);
+			return;
 
 		for ((*Counter) = 0; (*Counter) <= (size - 1); (*Counter)++)
 		{
