@@ -32,17 +32,13 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 	Holder = va_arg(args, char *);
 
-	if (separator != NULL)
-		if (Holder != NULL)
-			(i < (n - 1) ? printf("%s%s", Holder, separator) : printf("%s\n", Holder));
-		else
-			(i < (n - 1) ? printf("(nil)%s", separator) : puts("(nil)"));
-	else
-		if (Holder != NULL)
-			(i < (n - 1) ? printf("%s", Holder) : printf("%s\n", Holder));
-		else
-			(i < (n - 1) ? printf("(nil)") : puts("(nil)"));
+	(Holder == NULL ? printf("(nil)") : printf("%s", Holder));
+
+	if (i < (n - 1) && separator != NULL)
+		printf("%s", separator);
 	}
 
 	va_end(args);
+
+	putchar('\n');
 }
