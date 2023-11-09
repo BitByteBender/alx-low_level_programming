@@ -30,11 +30,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	Holder = va_arg(args, int);
 
 	if (separator != NULL)
-		(i < (n - 1) ? printf("%d%s", Holder, separator) : printf("%d", Holder));
+		(i != (n - 1) ? printf("%d%s", Holder, separator) : printf("%d", Holder));
 	else
 		printf("%d", Holder);
 	}
-	va_end(args);
-
 	putchar('\n');
+	va_end(args);
 }
