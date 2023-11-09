@@ -36,12 +36,12 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		if (Holder != NULL)
 			(i < (n - 1) ? printf("%s%s", Holder, separator) : printf("%s\n", Holder));
 		else
-			(i < (n - 1) ? printf("nil%s", separator) : puts("nil"));
+			(i < (n - 1) ? printf("(nil)%s", separator) : puts("(nil)"));
 	else
 		if (Holder != NULL)
 			(i < (n - 1) ? printf("%s", Holder) : printf("%s\n", Holder));
 		else
-			(i < (n - 1) ? printf("nil") : puts("nil"));
+			(i < (n - 1) ? printf("(nil)") : puts("(nil)"));
 	}
 
 	va_end(args);
