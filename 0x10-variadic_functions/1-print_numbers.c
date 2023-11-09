@@ -27,13 +27,13 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	for (i = 0; i < n; i++)
 	{
-	Holder = va_arg(args, const unsigned int);
+	Holder = va_arg(args, int);
+	printf("%d", Holder);
 
-	if (separator != NULL)
-		(i != (n - 1) ? printf("%d%s", Holder, separator) : printf("%d", Holder));
-	else
-		printf("%d", Holder);
+	if (i < (n - 1) && separator != NULL)
+		printf("%s", separator);
 	}
-	putchar('\n');
 	va_end(args);
+
+	putchar('\n');
 }
