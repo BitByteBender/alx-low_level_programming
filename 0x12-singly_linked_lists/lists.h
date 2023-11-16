@@ -24,4 +24,6 @@ size_t list_len(const list_t *h);
 list_t *add_node(list_t **head, const char *);
 
 list_t *add_node_end(list_t **head, const char *);
+
+void free_list(list_t *head);
 #endif /* LISTS_H */
