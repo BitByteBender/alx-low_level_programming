@@ -23,6 +23,12 @@ void print_binary(unsigned long int n)
 	short i = (sizeof(unsigned long int) * 8) - 1;
 	unsigned int valHolder = 0;
 
+	if (n == 0)
+	{
+		_putchar('0');
+		return;
+	}
+
 	while (i >= 0)
 	{
 		if (n & _pow(2, i))
