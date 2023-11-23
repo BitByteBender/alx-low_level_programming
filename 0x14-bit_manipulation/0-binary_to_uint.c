@@ -25,10 +25,15 @@ unsigned int binary_to_uint(const char *b)
 	short i = 0;
 	unsigned short powCounter = 0, Sum = 0;
 
+	if (b == NULL)
+		return (0);
+
 	for (i = (strlen(b) - 1); i >= 0; i--)
 	{
-		if (b[i] == '1')
-			Sum += _pow(2, powCounter);
+		if (b[i] == '1' || b[i] == '0')
+			Sum += (b[i] - '0') * _pow(2, powCounter);
+		else
+			return (0);
 
 	powCounter++;
 	}
