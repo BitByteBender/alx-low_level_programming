@@ -11,14 +11,19 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	const unsigned long ulBits = sizeof(*n) * 8;
 	unsigned long Condition = (1 << index);
 
-	if (n == NULL || index >= ulBits)
+	if (n == NULL || index == 0)
 	{
-		return (-1);
+		return (0);
 	}
+	else
+	{
+	if (index >= ulBits)
+		return (-1);
 	else if ((*n & Condition) != 0)
 	{
 		*n &= ~Condition;
 		return (1);
+	}
 	}
 
 	return (0);
