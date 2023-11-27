@@ -77,14 +77,15 @@ void _copy_from_to(const char *fnameFrom, const char *fnameTo)
 		rdBytes = read(file_From, buffer, sizeof(buffer));
 	}
 
-	if (fchmod(file_To, 0664) == -1)
-	{
-	ErrMsg = "Error: Can't change file permissions";
-	dprintf(STDERR_FILENO, "%s %s\n", ErrMsg, fnameTo);
-	closeFiles(file_From, file_To);
-	exit(99);
-	}
-
+	/**
+	*if (fchmod(file_To, 0664) == -1)
+	*{
+	*ErrMsg = "Error: Can't change file permissions";
+	*dprintf(STDERR_FILENO, "%s %s\n", ErrMsg, fnameTo);
+	*closeFiles(file_From, file_To);
+	*exit(99);
+	*}
+	*/
 	closeFiles(file_From, file_To);
 }
 /**
