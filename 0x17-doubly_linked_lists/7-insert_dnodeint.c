@@ -10,7 +10,7 @@ dlistint_t *dnodeGenerator(short, unsigned int);
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *newNode, *thisNode = *h;
+	dlistint_t *newNode, *thisNode;
 	unsigned short i = 0;
 
 	if (h == NULL)
@@ -30,15 +30,14 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	}
 	else
 	{
-		if (thisNode != NULL)
-		{
+		thisNode = *h;
 		while (i < (idx - 1) && thisNode != NULL)
 		{
 		thisNode = thisNode->next;
 		i++;
 		}
-		}
-		else if (i < (idx - 1) || thisNode == NULL)
+
+		if (i < (idx - 1) || thisNode == NULL)
 		{
 		free(newNode);
 		return (NULL);
