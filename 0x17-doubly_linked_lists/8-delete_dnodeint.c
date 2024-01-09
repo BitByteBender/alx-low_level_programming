@@ -28,13 +28,13 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	}
 
 	thisNode = *head;
-	while (i < (index - 1))
+	while (i < (index - 1) && thisNode != NULL)
 	{
 	thisNode = thisNode->next;
 	i++;
 	}
 
-	if (thisNode == NULL)
+	if (thisNode == NULL || thisNode->next == NULL)
 		return (-1);
 
 	container = thisNode->next;
