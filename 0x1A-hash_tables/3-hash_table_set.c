@@ -18,8 +18,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *hsh, *freshNode;
 
 	if (ht == NULL || key == NULL || value == NULL)
+	{
 		return (0);
-
+	}
+	else
+	{
 	idx = key_index((unsigned char *)key, ht->size);
 	hsh = ht->array[idx];
 
@@ -45,6 +48,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	freshNode->next = ht->array[idx];
 	ht->array[idx] = freshNode;
+	}
 
 	return (1);
 }
