@@ -23,14 +23,7 @@ int binary_search(int *array, size_t size, int value)
 		if (i > lValue)
 			printf(", ");
 
-		if (i == val)
-		{
 		printf("%d", array[i]);
-		}
-		else
-		{
-		printf("%d", array[i]);
-		}
 	}
 	putchar('\n');
 
